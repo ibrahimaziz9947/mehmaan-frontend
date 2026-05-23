@@ -1,8 +1,11 @@
+import Hero from "@/components/home/Hero";
+import FeaturedProperties from "@/components/home/FeaturedProperties";
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-24">
-      <h1 className="text-4xl font-bold">Welcome to Mehmaan</h1>
-      <p className="mt-4 text-lg text-gray-600">Short-term Rental Marketplace</p>
-    </main>
+    <div className="flex flex-col w-full">
+      <Hero />
+      <FeaturedProperties />
+    </div>
   );
 }
