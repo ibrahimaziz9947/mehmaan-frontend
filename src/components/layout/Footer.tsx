@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -8,30 +9,38 @@ export default function Footer() {
           {/* Brand Section */}
           <div className="md:col-span-1">
             <Link href="/" className="inline-block mb-4">
-              <span className="text-2xl font-bold tracking-tight text-primary">Mehmaan</span>
+              <div className="relative w-44 h-14">
+                <Image 
+                  src="/images/mehmaan-logo.png" 
+                  alt="Mehmaan Logo" 
+                  fill
+                  className="object-contain object-left"
+                />
+              </div>
             </Link>
+            <p className="text-primary font-medium mb-2 italic">Home Away From Home</p>
             <p className="text-subheading text-sm pr-4">
-              Elevating the standard of short-term rentals with elegant spaces and premium hospitality.
+              Elevating the standard of short-term rentals with elegant spaces and premium hospitality across Pakistan.
             </p>
           </div>
 
           {/* Quick Links Placeholders */}
           <div>
-            <h3 className="font-semibold text-foreground mb-4">Discover</h3>
+            <h3 className="font-semibold text-foreground mb-4">Explore</h3>
             <ul className="space-y-3">
+              <li>
+                <Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Properties
+                </Link>
+              </li>
               <li>
                 <Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   Destinations
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Featured Homes
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Experiences
+                <Link href="/vendor" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Become a Host
                 </Link>
               </li>
             </ul>
@@ -42,17 +51,17 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  About Us
+                  About Mehmaan
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Contact
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   Careers
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Press
                 </Link>
               </li>
             </ul>
@@ -68,12 +77,12 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Contact Us
+                  Trust & Safety
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Trust & Safety
+                  Privacy Policy
                 </Link>
               </li>
             </ul>

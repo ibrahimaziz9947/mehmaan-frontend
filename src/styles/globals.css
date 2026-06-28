@@ -2,65 +2,66 @@
 
 /* 
   Mehmaan Design System Foundation
-  Brand: Modern, minimal, elegant, hospitality-focused
-  Primary Color: Deep Green
+  Brand: Warm, welcoming, affordable luxury, local cultural charm
 */
 
 :root {
-  /* Brand Color System */
-  --brand-green-50: #f0fdf4;
-  --brand-green-100: #dcfce7;
-  --brand-green-200: #bbf7d0;
-  --brand-green-300: #86efac;
-  --brand-green-400: #4ade80;
-  --brand-green-500: #22c55e;
-  --brand-green-600: #16a34a;
-  --brand-green-700: #15803d;
-  --brand-green-800: #166534;
-  --brand-green-900: #0f4c3a; /* Deep primary green */
-  --brand-green-950: #052e16;
+  /* Official Brand Color Palette */
+  --brand-deep-teal: #046C4E;
+  --brand-dark-hero: #034235;
+  --brand-warm-sand: #F4EDE4;
+  --brand-terracotta: #D36135;
+  --brand-muted-gold: #D9B46F;
+  --brand-text: #3A3A3A;
   
   /* Semantic Color Tokens */
-  --background: #fafafa; /* Neutral/light backgrounds */
-  --foreground: #111827; /* Deep text for high readability */
+  --background: var(--brand-warm-sand);
+  --foreground: var(--brand-text);
   
-  --primary: var(--brand-green-900);
+  --primary: var(--brand-deep-teal);
   --primary-foreground: #ffffff;
   
+  --accent: var(--brand-terracotta);
+  --accent-foreground: #ffffff;
+  
   --surface: #ffffff;
-  --surface-foreground: #111827;
+  --surface-foreground: var(--brand-text);
   
-  --muted: #f3f4f6;
-  --muted-foreground: #6b7280;
+  --muted: #E8DFD3; /* Slightly darker warm sand for subtle contrast */
+  --muted-foreground: #6b7280; /* Neutral gray for secondary text */
   
-  --border: #e5e7eb;
-  --border-hover: #d1d5db;
+  --border: #D1C7B7;
+  --border-hover: #B5A895;
 
-  --ring: var(--brand-green-900);
+  --ring: var(--brand-deep-teal);
   
   /* Typography */
-  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
+  --font-sans: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #f9fafb;
+    /* For a hospitality platform focusing on Warm Sand, dark mode might be subtle.
+       Using Dark Hero for dark mode backgrounds to keep it on-brand. */
+    --background: var(--brand-dark-hero);
+    --foreground: var(--brand-warm-sand);
     
-    --primary: var(--brand-green-700);
+    --primary: var(--brand-deep-teal);
     --primary-foreground: #ffffff;
     
-    --surface: #111827;
-    --surface-foreground: #f9fafb;
+    --accent: var(--brand-terracotta);
+    --accent-foreground: #ffffff;
     
-    --muted: #1f2937;
-    --muted-foreground: #9ca3af;
+    --surface: #04523B; /* Slightly lighter than dark hero */
+    --surface-foreground: var(--brand-warm-sand);
     
-    --border: #374151;
-    --border-hover: #4b5563;
+    --muted: #023127;
+    --muted-foreground: #B5A895;
+    
+    --border: #046C4E;
+    --border-hover: #058A63;
 
-    --ring: var(--brand-green-700);
+    --ring: var(--brand-muted-gold);
   }
 }
 
@@ -72,6 +73,9 @@
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
   
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  
   --color-surface: var(--surface);
   --color-surface-foreground: var(--surface-foreground);
   
@@ -82,7 +86,6 @@
   --color-ring: var(--ring);
   
   --font-sans: var(--font-sans);
-  --font-mono: var(--font-mono);
 }
 
 /* Base Typography and Element Styles */
@@ -104,7 +107,7 @@
   h1, h2, h3, h4, h5, h6 {
     color: var(--foreground);
     font-weight: 600;
-    letter-spacing: -0.025em;
+    letter-spacing: -0.02em;
   }
   
   h1 { font-size: 2.5rem; line-height: 1.2; }
@@ -163,11 +166,11 @@
     border: 1px solid var(--border);
     border-radius: 0.75rem;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-    transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
   }
   
   .card-premium:hover {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+    box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -5px rgba(0, 0, 0, 0.04);
     border-color: var(--border-hover);
   }
   
@@ -175,16 +178,20 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--primary);
-    color: var(--primary-foreground);
+    background-color: var(--accent); /* Terracotta CTA */
+    color: var(--accent-foreground);
     font-weight: 500;
     border-radius: 0.5rem;
-    padding: 0.625rem 1.25rem;
-    transition: background-color 0.2s, opacity 0.2s;
+    padding: 0.625rem 1.5rem;
+    transition: background-color 0.2s, transform 0.1s ease;
   }
   
   .btn-primary:hover {
-    opacity: 0.9;
+    background-color: #be552e; /* slightly darker terracotta */
+  }
+  
+  .btn-primary:active {
+    transform: scale(0.98);
   }
   
   .btn-outline {
@@ -192,16 +199,20 @@
     align-items: center;
     justify-content: center;
     background-color: transparent;
-    color: var(--foreground);
+    color: var(--brand-deep-teal);
     font-weight: 500;
-    border: 1px solid var(--border);
+    border: 1px solid var(--brand-deep-teal);
     border-radius: 0.5rem;
-    padding: 0.625rem 1.25rem;
-    transition: background-color 0.2s, border-color 0.2s;
+    padding: 0.625rem 1.5rem;
+    transition: background-color 0.2s, color 0.2s, transform 0.1s ease;
   }
   
   .btn-outline:hover {
-    background-color: var(--muted);
-    border-color: var(--border-hover);
+    background-color: var(--brand-deep-teal);
+    color: #ffffff;
+  }
+  
+  .btn-outline:active {
+    transform: scale(0.98);
   }
 }

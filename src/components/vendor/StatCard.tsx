@@ -18,8 +18,8 @@ export function StatCard({ stat }: StatCardProps) {
           <span
             className={`text-sm font-medium px-2.5 py-1 rounded-full ${
               trend.isPositive
-                ? "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400"
-                : "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400"
+                ? "bg-[#046C4E]/10 text-[#046C4E]"
+                : "bg-[#D36135]/10 text-[#D36135]"
             }`}
           >
             {trend.isPositive ? "+" : "-"}{trend.value}%

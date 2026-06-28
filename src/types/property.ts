@@ -1,3 +1,5 @@
+export type PropertyStatus = "active" | "draft" | "inactive";
+
 export interface Property {
   id: string;
   title: string;
@@ -8,4 +10,5 @@ export interface Property {
   guestCapacity: number;
   bedrooms: number;
   imageUrl: string;
+  status?: PropertyStatus;
 }

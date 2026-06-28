@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { 
   LayoutDashboard, 
@@ -52,8 +53,16 @@ export default function VendorLayout({ children }: VendorLayoutProps) {
         }`}
       >
         <div className="h-16 flex items-center justify-between px-6 border-b border-border shrink-0">
-          <Link href="/" className="text-2xl font-bold tracking-tight text-primary">
-            Mehmaan <span className="text-sm font-normal text-muted-foreground ml-1">Host</span>
+          <Link href="/" className="flex items-center gap-2">
+            <div className="relative w-28 h-8">
+              <Image 
+                src="/images/mehmaan-logo.png" 
+                alt="Mehmaan Logo" 
+                fill
+                className="object-contain object-left"
+              />
+            </div>
+            <span className="text-sm font-medium text-muted-foreground ml-1">Host</span>
           </Link>
           <button className="lg:hidden text-muted-foreground" onClick={closeSidebar}>
             <X className="w-6 h-6" />
@@ -104,7 +113,7 @@ export default function VendorLayout({ children }: VendorLayoutProps) {
           <div className="flex items-center gap-4 ml-auto">
             <button className="p-2 relative text-muted-foreground hover:text-foreground transition-colors">
               <Bell className="w-5 h-5" />
-              <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-red-500 rounded-full border-2 border-surface"></span>
+              <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-accent rounded-full border-2 border-surface"></span>
             </button>
             <div className="h-8 w-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-sm border border-primary/30">
               JD

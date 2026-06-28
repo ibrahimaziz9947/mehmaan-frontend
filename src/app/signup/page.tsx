@@ -33,7 +33,7 @@ export default function SignupPage() {
 
     // Mock client-side signup behavior
     console.log("Signup attempted with:", { role, firstName, lastName, email, password });
-    alert(`Mock ${role === "vendor" ? "Vendor" : "Guest"} Signup Successful! Backend integration coming soon.`);
+    alert(`Mock ${role === "vendor" ? "Host" : "Guest"} Signup Successful! Backend integration coming soon.`);
   };
 
   return (
@@ -102,12 +102,12 @@ export default function SignupPage() {
         
         <p className="text-xs text-muted-foreground mt-1">
           By creating an account, you agree to our{" "}
-          <Link href="#" className="text-primary hover:underline">Terms of Service</Link> and{" "}
-          <Link href="#" className="text-primary hover:underline">Privacy Policy</Link>.
+          <Link href="#" className="text-primary hover:text-accent transition-colors">Terms of Service</Link> and{" "}
+          <Link href="#" className="text-primary hover:text-accent transition-colors">Privacy Policy</Link>.
         </p>
 
         <button type="submit" className="btn-primary w-full mt-2 py-3 text-base">
-          Create {role === "vendor" ? "Vendor" : "Guest"} Account
+          Create {role === "vendor" ? "Host" : "Guest"} Account
         </button>
 
         <div className="relative my-4">
@@ -139,7 +139,7 @@ export default function SignupPage() {
 
         <p className="text-center text-sm text-muted-foreground mt-4">
           Already have an account?{" "}
-          <Link href="/login" className="font-medium text-primary hover:underline">
+          <Link href="/login" className="font-medium text-primary hover:text-accent transition-colors">
             Sign in
           </Link>
         </p>

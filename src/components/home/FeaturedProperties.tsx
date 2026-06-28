@@ -5,8 +5,8 @@ import PropertyCard from "@/components/property/PropertyCard";
 const MOCK_PROPERTIES: Property[] = [
   {
     id: "1",
-    title: "Villa Serenity",
-    location: "Bali, Indonesia",
+    title: "Luxury Farmhouse",
+    location: "Lahore, Pakistan",
     pricePerNight: 250,
     rating: 4.9,
     reviewsCount: 128,
@@ -16,9 +16,9 @@ const MOCK_PROPERTIES: Property[] = [
   },
   {
     id: "2",
-    title: "Alpine Retreat Cabin",
-    location: "Swiss Alps, Switzerland",
-    pricePerNight: 320,
+    title: "Pine View Cabin",
+    location: "Murree, Pakistan",
+    pricePerNight: 120,
     rating: 4.95,
     reviewsCount: 85,
     guestCapacity: 4,
@@ -27,9 +27,9 @@ const MOCK_PROPERTIES: Property[] = [
   },
   {
     id: "3",
-    title: "Oceanview Penthouse",
-    location: "Malibu, California",
-    pricePerNight: 450,
+    title: "Margalla Hills Penthouse",
+    location: "Islamabad, Pakistan",
+    pricePerNight: 180,
     rating: 4.8,
     reviewsCount: 210,
     guestCapacity: 8,
@@ -38,9 +38,9 @@ const MOCK_PROPERTIES: Property[] = [
   },
   {
     id: "4",
-    title: "Historic Kyoto Riad",
-    location: "Kyoto, Japan",
-    pricePerNight: 180,
+    title: "Clifton Seaview Apartment",
+    location: "Karachi, Pakistan",
+    pricePerNight: 150,
     rating: 4.98,
     reviewsCount: 340,
     guestCapacity: 2,
@@ -51,7 +51,7 @@ const MOCK_PROPERTIES: Property[] = [
 
 export default function FeaturedProperties() {
   return (
-    <section className="py-16 md:py-24">
+    <section className="py-16 md:py-24 bg-background">
       <div className="container-layout">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
           <div>

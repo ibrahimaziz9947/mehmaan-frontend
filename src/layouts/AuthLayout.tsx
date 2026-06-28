@@ -23,7 +23,14 @@ export default function AuthLayout({ children, title, subtitle, imageUrl }: Auth
           />
           <div className="absolute inset-0 bg-primary/20 mix-blend-multiply" />
           <div className="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent flex flex-col justify-end p-10 text-white">
-            <h2 className="text-3xl font-bold mb-3 tracking-tight">Mehmaan</h2>
+            <div className="relative w-40 h-12 mb-4 bg-white/90 p-2 rounded-lg backdrop-blur-sm">
+              <Image 
+                src="/images/mehmaan-logo.png" 
+                alt="Mehmaan Logo" 
+                fill
+                className="object-contain"
+              />
+            </div>
             <p className="text-white/90 text-lg">
               Elevating the standard of short-term rentals with elegant spaces and premium hospitality.
             </p>
